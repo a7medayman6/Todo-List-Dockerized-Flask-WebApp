@@ -18,7 +18,7 @@ jobs:
     - name: Build the Docker image
       uses: mr-smithers-excellent/docker-build-push@v4
       with:
-        image: a7medayman6/todolist-flask
+        image: docker.io/a7medayman6/todolist-flask
         registry: docker.io
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
