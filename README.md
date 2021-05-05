@@ -64,14 +64,14 @@ python3 app.py
 docker run -it -p 5001:5000 -v /home/ahmed/todo-flask/db/:/app/db/ todolist-flask
 ```
 - created a task in the container tab
-![Image of the app from container](images/3.png)
+![Image of the app from container](Screenshots/3.png)
 - switched to the local-host tab, and wallah the same task are here, let's say hi back from the local host!
-![Image of the app from local-host](images/4.png)
+![Image of the app from local-host](Screenshots/4.png)
 
 ## Features
 - Add new tasks
 - Mark task as finished/unfinished
 - Delete a task
-![add tasks](images/5.png)
-![mark as finished](images/6.png)
-![delete tasks](images/7.png)
+![add tasks](Screenshots/5.png)
+![mark as finished](Screenshots/6.png)
+![delete tasks](Screenshots/7.png)
