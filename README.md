@@ -7,6 +7,7 @@
 - persisting data 
 - playing around with docker volumes and volume mapping
 - deployment on heroku
+- basic pipeline
 - writing Git-Hub Actions Workflow file
 - Git-Hub Actions to build and push the docker image to the registry on each push/PR
 
