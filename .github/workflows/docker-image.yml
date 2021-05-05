@@ -19,8 +19,11 @@ jobs:
       run:  docker login --username=${{ secrets.DOCKER_USERNAME }} --password=${{ secrets.DOCKER_PASSWORD }}
     
     - name: Build docker-image
-      run: docker build -t docker.io/a7medayman6/todolist-flask:latest .
+      run: docker build -t a7medayman6/todolist-flask:latest .
     
+    - name: Take docker-image
+      run: docker tag $(docker images -aq | head -n1) ${{ secrets.DOCKER_USERNAME }}/todolist-flask:latest
+      
     - name: Push to registry
-      run: docker push docker.io/a7medayman6/todolist-flask:latest
+      run: docker push a7medayman6/todolist-flask:latest
     
