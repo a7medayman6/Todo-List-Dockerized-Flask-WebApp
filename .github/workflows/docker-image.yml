@@ -21,7 +21,7 @@ jobs:
     - name: Build docker-image
       run: docker build -t a7medayman6/todolist-flask:latest .
     
-    - name: Take docker-image
+    - name: Tag docker-image
       run: docker tag $(docker images -aq | head -n1) ${{ secrets.DOCKER_USERNAME }}/todolist-flask:latest
       
     - name: Push to registry
