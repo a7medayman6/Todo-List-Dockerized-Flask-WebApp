@@ -1,12 +1,17 @@
-# TO DO LIST - FLASK - DOCKER
-<b>Simple web-project to practice docker concepts </b>
+# TO DO LIST - FLASK - DOCKER - Heroku Hands-On
+
+<b>Simple web-project to practice docker and deployment concepts </b>
 - writing docker files
 - building images
 - running container and manage them
 - persisting data 
 - playing around with docker volumes and volume mapping
+- deployment on heroku
 
 ## Running 
+
+### Try it out live on heroku!
+[TO DO LIST](https://todolist-flask-docker-practice.herokuapp.com/)
 
 ### USING DOCKER - PULLING FROM DOCKER HUB
 
