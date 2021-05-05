@@ -12,13 +12,15 @@
 
 ```docker
 # pull the image from docker hub
-docker pull a7medayman6/todolist-flask
+$ docker pull a7medayman6/todolist-flask
+
 # create docker volume for the database to keep your tasks everytime you run ir
-docker volume create todolist.db
+$ docker volume create todolist.db
+
 # run the container
 # map port 5000 in the container to 5001 (or any other free port)
 # map the docker volume you created to /app/db 
-docker run -d -p 5001:5000 -v todolist.db:/app/db todolist-flask
+$ docker run -d -p 5001:5000 -v todolist.db:/app/db todolist-flask
 
 # open the browser, go to http://0.0.0.0:5001 and here is your todo list up and running
 ```
@@ -27,20 +29,21 @@ docker run -d -p 5001:5000 -v todolist.db:/app/db todolist-flask
 
 ```bash
 # clone the repo into your local host
-git clone 
+$ git clone https://github.com/a7medayman6/Todo-List-Dockerized-Flask-WebApp
 
-cd todo-flask
+$ cd Todo-List-Dockerized-Flask-WebApp
 
 # this will build the docker image from the docker file
 docker build -t todolist-flask:latest .
 
 # check the build was succesfull
-docker images | grep todolist-flask
+$ docker images | grep todolist-flask
 # the output should be
 # todolist-flask
 
-# create docker volume for the database to keep your tasks everytime you run ir
-docker volume create todolist.db
+# create docker volume for the database to keep your tasks everytime you run it
+$ docker volume create todolist.db
+
 # run the container
 # map port 5000 in the container to 5001 (or any other free port)
 # map the docker volume you created to /app/db 
@@ -51,8 +54,8 @@ docker run -d -p 5001:5000 -v todolist.db:/app/db todolist-flask
 ### BUILDING
 
 ```bash
-git clone
-cd todo-flask
+git clone https://github.com/a7medayman6/Todo-List-Dockerized-Flask-WebApp
+cd Todo-List-Dockerized-Flask-WebApp
 python3 -r requirements.txt
 source env/bin/activate
 python3 app.py
