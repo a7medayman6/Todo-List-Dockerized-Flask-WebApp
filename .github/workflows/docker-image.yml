@@ -14,8 +14,16 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Build the Docker image
-      run: |
-          docker build . --file Dockerfile --tag my-image-name:$(date +%s) 
-          docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }} 
-          docker push a7medayman6/todolist-flask
+    
+    - name: Login to docker-hub
+      run:  docker login --username=${{ secrets.DOCKER_USERNAME }} --password=${{ secrets.DOCKER_PASSWORD }}
+    
+    - name: Build docker-image
+      run: docker build -t a7medayman6/todolist-flask:latest .
+    
+    - name: Take docker-image
+      run: docker tag $(docker images -aq | head -n1) ${{ secrets.DOCKER_USERNAME }}/todolist-flask:latest
+      
+    - name: Push to registry
+      run: docker push a7medayman6/todolist-flask:latest
+    
