@@ -1,4 +1,4 @@
-# TO DO LIST - FLASK - DOCKER - Heroku Hands-On
+# TO DO LIST - FLASK - DOCKER - Heroku - GITHUB ACTIONS Hands-On
 
 <b>Simple web-project to practice docker and deployment concepts </b>
 - writing docker files
@@ -7,6 +7,8 @@
 - persisting data 
 - playing around with docker volumes and volume mapping
 - deployment on heroku
+- Git-Hub Actions to build and push the docker image to the registry on each push/PR
+
 
 ## Running 
 
