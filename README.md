@@ -10,7 +10,7 @@
 
 ### USING DOCKER - PULLING FROM DOCKER HUB
 
-```docker
+```bash
 # pull the image from docker hub
 $ docker pull a7medayman6/todolist-flask
 
