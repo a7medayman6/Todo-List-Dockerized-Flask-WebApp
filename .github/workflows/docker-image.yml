@@ -14,9 +14,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    
     - name: Build the Docker image
-      run: |
-          docker build ../../ --file Dockerfile --tag a7medayman6/todolist-flask
-          docker login --username=${{ secrets.DOCKER_USERNAME }} --password=${{ secrets.DOCKER_PASSWORD }} 
-          docker push a7medayman6/todolist-flask
+      uses: mr-smithers-excellent/docker-build-push@v4
+      with:
+        image: a7medayman6/todolist-flask
+        registry: docker.io
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
 
