@@ -3,13 +3,14 @@
 - writing docker files
 - building images
 - running container and manage them
+- persisting data 
 - playing around with docker volumes and volume mapping
 
 ## Running 
 
 ### USING DOCKER - PULLING FROM DOCKER HUB
 
-```bash
+```docker
 # pull the image from docker hub
 docker pull a7medayman6/todolist-flask
 # create docker volume for the database to keep your tasks everytime you run ir
@@ -56,3 +57,21 @@ python3 -r requirements.txt
 source env/bin/activate
 python3 app.py
 ```
+## Volume mapping 
+- I was running the app from the docker container on port 5001 and from the local host at port 5000 
+- Mapped the /home/ahmed/todo-flask/db/ directory in the local host to /app/db in the container to have the same data updating in both tabs and to persist the data using this command
+```docker 
+docker run -it -p 5001:5000 -v /home/ahmed/todo-flask/db/:/app/db/ todolist-flask
+```
+- created a task in the container tab
+![Image of the app from container](3.png)
+- switched to the local-host tab, and wallah the same task are here, let's say hi back from the local host!
+![Image of the app from local-host](4.png)
+
+## Features
+- Add new tasks
+- Mark task as finished/unfinished
+- Delete a task
+![](5.png)
+![](6.png)
+![](7.png)
