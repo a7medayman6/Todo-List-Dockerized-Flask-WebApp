@@ -54,17 +54,17 @@ docker run -d -p 5001:5000 -v todolist.db:/app/db todolist-flask
 ### BUILDING
 
 ```bash
-git clone https://github.com/a7medayman6/Todo-List-Dockerized-Flask-WebApp
-cd Todo-List-Dockerized-Flask-WebApp
-python3 -r requirements.txt
-source env/bin/activate
-python3 app.py
+$ git clone https://github.com/a7medayman6/Todo-List-Dockerized-Flask-WebApp
+$ cd Todo-List-Dockerized-Flask-WebApp
+$ python3 -r requirements.txt
+$ source env/bin/activate
+$ python3 app.py
 ```
 ## Volume mapping 
 - I was running the app from the docker container on port 5001 and from the local host at port 5000 
 - Mapped the /home/ahmed/todo-flask/db/ directory in the local host to /app/db in the container to have the same data updating in both tabs and to persist the data using this command
 ```docker 
-docker run -it -p 5001:5000 -v /home/ahmed/todo-flask/db/:/app/db/ todolist-flask
+$ docker run -it -p 5001:5000 -v /home/ahmed/todo-flask/db/:/app/db/ todolist-flask
 ```
 - created a task in the container tab
 ![Image of the app from container](Screenshots/3.png)
