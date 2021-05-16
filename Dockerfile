@@ -24,4 +24,4 @@ WORKDIR /app
 COPY . .
 
 # the command to run once we run the container 
-CMD [ "python3", "-m", "flask", "run", "--host=0.0.0.0", "--port=$PORT" ]
+CMD python3 app.py
