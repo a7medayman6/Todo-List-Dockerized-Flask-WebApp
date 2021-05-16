@@ -23,7 +23,7 @@ WORKDIR /app
 # copy the project artefects into the container under the root directory
 COPY . .
 
-CMD gunicorn --bind 0.0.0.0:$PORT wsgi
 
 # the command to run once we run the container 
-ENTRYPOINT python3 app.py
+ENTRYPOINT python3 app.py;
+CMD gunicorn --bind 0.0.0.0:$PORT wsgi
