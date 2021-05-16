@@ -23,6 +23,5 @@ WORKDIR /app
 # copy the project artefects into the container under the root directory
 COPY . .
 
-
 # the command to run once we run the container 
-CMD [ "python3", "-m", "flask", "run", "--host=0.0.0.0" ]
+CMD [ "python3", "-m", "flask", "run", "--host=0.0.0.0", "--port=$PORT" ]
