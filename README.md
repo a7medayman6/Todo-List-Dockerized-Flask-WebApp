@@ -29,7 +29,7 @@ $ docker volume create todolist.db
 # run the container
 # map port 5000 in the container to 5001 (or any other free port)
 # map the docker volume you created to /app/db 
-$ docker run -d -p 5001:5000 -v todolist.db:/app/db todolist-flask
+$ docker run -d -p 5001:5000 -v todolist.db:/app/db a7medayman6/todolist-flask
 
 # open the browser, go to http://0.0.0.0:5001 and here is your todo list up and running
 ```
