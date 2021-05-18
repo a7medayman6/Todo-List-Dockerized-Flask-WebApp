@@ -15,7 +15,7 @@
 ## Running 
 
 ### Try it out live on heroku!
-[TO DO LIST](https://todolist-flask-docker-practice.herokuapp.com/)
+[TO DO LIST](https://todolist-docker.herokuapp.com/)
 
 ### USING DOCKER - PULLING FROM DOCKER HUB
 
