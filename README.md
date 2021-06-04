@@ -86,9 +86,9 @@ $ docker run -it -p 5001:5000 -v /home/ahmed/todo-flask/db/:/app/db/ todolist-fl
 ![Image of the app from local-host](Screenshots/4.png)
 
 ## Features
-- Add new tasks
-- Mark task as finished/unfinished
-- Delete a task
+- Add new tasks.
+- Mark task as finished/unfinished.
+- Delete a task.
 <br>
 
 ![add tasks](Screenshots/5.png)
