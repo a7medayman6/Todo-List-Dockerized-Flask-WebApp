@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  app:
+    image: todolistdockerizedflaskwebapp
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 82:5000
+    volumes:
+      - todolist.db:/app/db
+volumes:
+  todolist.db:
